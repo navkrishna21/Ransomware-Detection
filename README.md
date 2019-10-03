@@ -17,3 +17,8 @@ I decided on three parameters on which the behavior can be judged after studying
 The project is multithreaded so that all the three features can be run asynchronously.
 If the program signals for any 2 out of the 3 parameters, it notifies it as a high risk of Ransomware Detection.  
 
+
+## Screenshots:
+![Image](./screenshots/1.png)
+
+![Image](./screenshots/2.png)
