@@ -10,7 +10,7 @@ Ransomware is a malware/malicious software program designed to block or disable 
 The project aims at detecting and notifying the user of potential ransomware behavior on the windows system.
 I decided on three parameters on which the behavior can be judged after studying the behavior of various ransomware.
 
-* Detecting a Process commonly executed by Ransomware.(Example VSSadmin process for deleting backup files)
+* Detecting a Process commonly executed by Ransomware.(In my project I am detecting VSSadmin process which is commonly run by Ransomware for deleting backup files)
 * Monitoring a commonly affected Windows Registry key for changes.
 * Creating a honeypot folder, and monitoring it for any file changes.(renames and deletes)
 
