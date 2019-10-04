@@ -17,6 +17,9 @@ I decided on three parameters on which the behavior can be judged after studying
 The project is multithreaded so that all the three features can be run asynchronously.
 If the program signals for any 2 out of the 3 parameters, it notifies it as a high risk of Ransomware Detection.  
 
+A time window of 5 minutes is considered for the Ransomware to take action.
+It is considered as a jigh possibility for a Ransomware activity if and only if the time difference between any two actions is less than 5 minutes.
+
 
 ## Screenshots:
 ![Image](./screenshots/1.png)
