@@ -28,4 +28,4 @@ It is considered as a high possibility of a Ransomware activity if and only if t
 
 ## Demo Video(Click to play):
 
-[![Watch the video](https://i.ibb.co/JvLcpWF/thumbnail.png)](https://youtu.be/65DM8c19m5A)
+[![Watch the video](https://i.ibb.co/2PJh8YR/thumbnail.png)](https://youtu.be/65DM8c19m5A)
