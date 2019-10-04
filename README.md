@@ -2,8 +2,8 @@
 Visual C++ console application to detect ransomware activity on Windows OS. It consists of a registry monitor, filesystem watcher and a process detector.
 
 # Requirements
-* Visual Studio 2017(To open the source project)
-* Visual C++ 2017 runtime library 
+* Visual Studio 2017 (Only for the source project, not needed for the executable)
+* Visual C++ 2017 redistributable 
 
 # Description
 Ransomware is a malware/malicious software program designed to block or disable access to the data your computer until a sum of money is paid.
