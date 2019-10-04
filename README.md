@@ -25,3 +25,7 @@ It is considered as a high possibility of a Ransomware activity if and only if t
 ![Image](./screenshots/1.png)
 
 ![Image](./screenshots/2.png)
+
+## Demo Video:
+
+[![Watch the video](https://img.youtube.com/vi/65DM8c19m5A/0.jpg)](https://youtu.be/65DM8c19m5A)
