@@ -31,7 +31,7 @@ DWORD WINAPI vssadmin_detector(LPVOID lpParam) {
 		if (*pData->detected)
 			return 0;
 
-		printf("VSSAdmin.exe is running\n");
+		printf("VSSAdmin.exe was run\n");
 		
 		pData->last_sucessful = get_current_time();
 		

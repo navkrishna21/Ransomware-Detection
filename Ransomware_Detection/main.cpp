@@ -7,6 +7,16 @@
 #include "threadData.h"
 #include "myTimeLibrary.h"
 
+
+LPCSTR user_input() {
+	
+	char* buf = (char*)malloc( sizeof(char) * 100 );
+
+	scanf_s("%s", buf , 100 );
+
+	return (LPCSTR)buf;
+}
+
 //void main(int argc, char *argv[])
 int _tmain(int argc, TCHAR *argv[])
 {
@@ -19,9 +29,13 @@ int _tmain(int argc, TCHAR *argv[])
 	pData_registry_monitor = (PMYDATA)HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, sizeof(MYDATA));
 	pData_file_sytem_watcher = (PMYDATA)HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, sizeof(MYDATA));
 
-
+	printf("Process to be checked: vssadmin.exe\n");
 	pData_vssadmin_detector->path = "vssadmin.exe"; //VSSAdmin process
-	pData_file_sytem_watcher->path = "C:\\Users\\saint_boy\\Desktop\\new"; //Honeypot folder path to monitor
+
+	printf("\nEnter the path of folder to monitor:\n");
+	pData_file_sytem_watcher->path = user_input();
+	
+	printf("\nRegistry to be monitored: HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\n");
 	pData_registry_monitor->path = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"; //Registry path to monitor
 	
 	//initialising last_successful values so that they are greater than maximum time to get infected
@@ -60,7 +74,7 @@ int _tmain(int argc, TCHAR *argv[])
 		0,                      // use default creation flags 
 		&dwThreadId3);   // returns the thread identifier
 	
-	printf("Ransomware detection has started\n");
+	printf("\nRANSOMWARE DETECTION HAS STARTED:\n");
 
 	while (ransomware_detected == false) {
 
@@ -73,8 +87,6 @@ int _tmain(int argc, TCHAR *argv[])
 		if (abs(pData_registry_monitor->last_sucessful - pData_file_sytem_watcher->last_sucessful) <= MAX_TIME_TO_GET_INFECTED)
 			ransomware_detected = true;
 	}
-
-	printf("High possibility of a ransomware infection");
 
 	CloseHandle(hThread_vssadmin_detector);
 	if (pData_vssadmin_detector != NULL)
@@ -96,7 +108,10 @@ int _tmain(int argc, TCHAR *argv[])
 		HeapFree(GetProcessHeap(), 0, pData_file_sytem_watcher );
 		pData_file_sytem_watcher = NULL;    // Ensure address is not reused.
 	}
+
+	printf("High possibility of a RANSOMWARE INFECTION!!!!\n");
 	
+	getchar();
 	getchar();
 	return 0;
 }

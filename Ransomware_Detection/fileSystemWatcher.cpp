@@ -77,7 +77,7 @@ DWORD WINAPI Watcher(LPVOID lpParam) {
 					break;
 
 				default:
-					printf("unknown action");
+					printf("unknown action\n");
 					pData->last_sucessful = get_current_time();
 				}
 
